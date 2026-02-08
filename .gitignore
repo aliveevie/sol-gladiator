@@ -3,4 +3,6 @@ target/
 .anchor/
 test-ledger/
 .env
+.env.*
 *.so
+*.key
