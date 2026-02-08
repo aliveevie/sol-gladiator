@@ -15,8 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
+      - name: Install Rust 1.79.0
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.79.0
 
       - name: Cache Rust
         uses: actions/cache@v4
@@ -25,17 +27,18 @@ jobs:
             ~/.cargo/registry
             ~/.cargo/git
             target
-          key: rust-${{ hashFiles('**/Cargo.lock') }}
+          key: rust-1.79-${{ hashFiles('**/Cargo.lock') }}
 
       - name: Install Solana CLI
         run: |
           sh -c "$(curl -sSfL https://release.anza.xyz/v${{ env.SOLANA_VERSION }}/install)"
           echo "$HOME/.local/share/solana/install/active_release/bin" >> $GITHUB_PATH
 
-      - name: Install Anchor CLI
+      - name: Install Anchor CLI via AVM
         run: |
-          cargo install --git https://github.com/coral-xyz/anchor --tag v${{ env.ANCHOR_VERSION }} anchor-cli --locked || \
-          cargo install --git https://github.com/coral-xyz/anchor avm --locked && avm install ${{ env.ANCHOR_VERSION }} && avm use ${{ env.ANCHOR_VERSION }}
+          cargo install --git https://github.com/coral-xyz/anchor avm --force --locked
+          avm install ${{ env.ANCHOR_VERSION }}
+          avm use ${{ env.ANCHOR_VERSION }}
 
       - name: Setup Solana keypair
         run: |
