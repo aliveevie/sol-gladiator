@@ -39,7 +39,8 @@ jobs:
 
       - name: Install Anchor CLI
         run: |
-          curl -sSfL https://github.com/coral-xyz/anchor/releases/download/v${{ env.ANCHOR_VERSION }}/anchor-x86_64-unknown-linux-gnu -o /usr/local/bin/anchor
+          # v0.30.1 has no prebuilt binaries; use 0.31.1 (backward compatible for building)
+          curl -sSfL https://github.com/coral-xyz/anchor/releases/download/v0.31.1/anchor-0.31.1-x86_64-unknown-linux-gnu -o /usr/local/bin/anchor
           chmod +x /usr/local/bin/anchor
           anchor --version
 
@@ -84,7 +85,7 @@ jobs:
 
       - name: Install Anchor CLI
         run: |
-          curl -sSfL https://github.com/coral-xyz/anchor/releases/download/v${{ env.ANCHOR_VERSION }}/anchor-x86_64-unknown-linux-gnu -o /usr/local/bin/anchor
+          curl -sSfL https://github.com/coral-xyz/anchor/releases/download/v0.31.1/anchor-0.31.1-x86_64-unknown-linux-gnu -o /usr/local/bin/anchor
           chmod +x /usr/local/bin/anchor
           anchor --version
 
