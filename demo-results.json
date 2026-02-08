@@ -1,0 +1,56 @@
+{
+  "arena": "SolArena",
+  "network": "solana-devnet",
+  "agent": "iabdulkarim472",
+  "wallet": "HXWhnY7mdrZoR4aSmd3nCk6ccp4bQc3XyPZSoBD1pG1Y",
+  "timestamp": "2026-02-08T22:39:51.718Z",
+  "players": {
+    "sol-gladiator": {
+      "elo": 1198,
+      "wins": 1,
+      "losses": 1,
+      "draws": 1,
+      "wagered": 0,
+      "won": 0
+    },
+    "challenger-bot": {
+      "elo": 1202,
+      "wins": 1,
+      "losses": 1,
+      "draws": 1,
+      "wagered": 0,
+      "won": 0
+    }
+  },
+  "matches": [
+    {
+      "id": 1,
+      "game": "rps",
+      "winner": "sol-gladiator",
+      "score": "2-0",
+      "txHash": "2eGg1ia1NKfxaYqqt2AqYZkhVZMQV8ikuE4eDiGs4dyCavSxVQQfFQRnpmcK6EJejftsxG3vKmAoQMMxFALY2NXN",
+      "signature": "JsBdDIgFGlkOgswH0Ux65oH0Fiv4sB9L4cyJgLxWwtotZrapCwHHmDGqg+0Lgx+sgsOWw++ZdSOCRb2v6gcHBQ==",
+      "explorerUrl": "https://solscan.io/tx/2eGg1ia1NKfxaYqqt2AqYZkhVZMQV8ikuE4eDiGs4dyCavSxVQQfFQRnpmcK6EJejftsxG3vKmAoQMMxFALY2NXN?cluster=devnet"
+    },
+    {
+      "id": 2,
+      "game": "coinflip",
+      "result": {
+        "choice1": "tails",
+        "choice2": "tails",
+        "result": "tails",
+        "winner": "draw"
+      },
+      "txHash": "3mYqmS5HMLTiKv3KVQDpPrFDj3uKWXUKhtF9XcZKz4GEhoj4xneeFy7oeCM4vbrT4egTUTJFCssE7X9voggC9gx4",
+      "explorerUrl": "https://solscan.io/tx/3mYqmS5HMLTiKv3KVQDpPrFDj3uKWXUKhtF9XcZKz4GEhoj4xneeFy7oeCM4vbrT4egTUTJFCssE7X9voggC9gx4?cluster=devnet"
+    },
+    {
+      "id": 3,
+      "game": "rps",
+      "winner": "challenger-bot",
+      "txHash": "5LVBVt4ZPyZfGS5GwanvKejLp8oHuZmbuSDg8VZ9wtd9wmWqDfgvUDRHhTV9HPmJRZwCfvEwWpVPq2cvmbQnR2GF",
+      "explorerUrl": "https://solscan.io/tx/5LVBVt4ZPyZfGS5GwanvKejLp8oHuZmbuSDg8VZ9wtd9wmWqDfgvUDRHhTV9HPmJRZwCfvEwWpVPq2cvmbQnR2GF?cluster=devnet"
+    }
+  ],
+  "totalMatches": 3
+}
