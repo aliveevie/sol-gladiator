@@ -3,7 +3,7 @@ seeds = false
 skip-lint = false
 
 [programs.devnet]
-sol_arena = "So1Arena111111111111111111111111111111111111"
+sol_arena = "HXWhnY7mdrZoR4aSmd3nCk6ccp4bQc3XyPZSoBD1pG1Y"
 
 [registry]
 url = "https://api.apr.dev"

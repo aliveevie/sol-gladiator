@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::keccak;
 
-declare_id!("So1Arena111111111111111111111111111111111111");
+declare_id!("HXWhnY7mdrZoR4aSmd3nCk6ccp4bQc3XyPZSoBD1pG1Y");
 
 #[program]
 pub mod sol_arena {

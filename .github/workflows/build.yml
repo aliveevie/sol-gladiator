@@ -110,8 +110,8 @@ jobs:
           solana balance
           anchor build
           PROGRAM_ID=$(solana address -k target/deploy/sol_arena-keypair.json)
-          sed -i "s/So1Arena111111111111111111111111111111111111/$PROGRAM_ID/g" programs/sol_arena/src/lib.rs
-          sed -i "s/So1Arena111111111111111111111111111111111111/$PROGRAM_ID/g" Anchor.toml
+          sed -i "s/HXWhnY7mdrZoR4aSmd3nCk6ccp4bQc3XyPZSoBD1pG1Y/$PROGRAM_ID/g" programs/sol_arena/src/lib.rs
+          sed -i "s/HXWhnY7mdrZoR4aSmd3nCk6ccp4bQc3XyPZSoBD1pG1Y/$PROGRAM_ID/g" Anchor.toml
           anchor build
           anchor deploy --provider.cluster devnet
           echo "✅ Deployed to devnet: $PROGRAM_ID"
